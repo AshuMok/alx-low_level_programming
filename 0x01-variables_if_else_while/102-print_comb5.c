@@ -9,27 +9,31 @@
  */
 int main(void)
 {
-	int i, j;
+	int n1 = 0, n2;
 
-	for (i = 0; i <= 100; i++)
+	while(n1 <= 99)
 	{
-		for (j = 1; j <= 100; j++)
+		n2 = n1;
+		while(n2 <= 99)
 		{
-			if (p > i)
+			if (n2 != n1)
 			{
-				putchar((i / 10) + '0');
-				putchar((i % 10) + '0');
+				putchar((n1 / 10) + '0');
+				putchar((n1 % 10) + '0');
 				putchar(' ');
-				putchar((j / 10) + '0');
-				putchar((j % 10) + '0');
-				if (i != 98)
+				putchar((n2 / 10) + '0');
+				putchar((n2 % 10) + '0');
+
+				if(n1 != 98 || n2 != 98)
 				{
 					putchar(',');
 					putchar(' ');
 				}
 			}
+			++n2;
 		}
+		++n1;
 	}
 	putchar('\n');
-	return (0);
+	return 0;
 }
